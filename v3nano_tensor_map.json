@@ -1,0 +1,7493 @@
+{
+ "chromium_model_version": "2025.8.21.1028",
+ "format": 1,
+ "max_mse": 0.001,
+ "missing": {
+  "blk.0.altup_correct_coef.weight": 0.021886900067329407,
+  "blk.0.altup_correct_scale.weight": 0.0011399568757042289,
+  "blk.0.altup_predict_coef.weight": 0.03195619955658913,
+  "blk.0.attn_k_norm.weight": 0.08318149298429489,
+  "blk.0.attn_norm.weight": 0.011552857235074043,
+  "blk.0.attn_q_norm.weight": 0.09802152961492538,
+  "blk.0.ffn_norm.weight": 0.1421259343624115,
+  "blk.0.laurel_post_norm.weight": 0.0076812454499304295,
+  "blk.0.post_attention_norm.weight": 0.0038537003565579653,
+  "blk.0.post_ffw_norm.weight": 0.009495191276073456,
+  "blk.0.post_norm.weight": 0.0013193055056035519,
+  "blk.1.altup_correct_coef.weight": 0.19015313684940338,
+  "blk.1.altup_correct_scale.weight": 0.0010281432187184691,
+  "blk.1.altup_predict_coef.weight": 0.03391791507601738,
+  "blk.1.altup_router_norm.weight": 0.0010838925372809172,
+  "blk.1.attn_k_norm.weight": 0.08368057757616043,
+  "blk.1.attn_norm.weight": 0.006553614512085915,
+  "blk.1.attn_q_norm.weight": 0.11507456004619598,
+  "blk.1.ffn_norm.weight": 0.012345245108008385,
+  "blk.1.laurel_post_norm.weight": 0.013411730527877808,
+  "blk.1.post_attention_norm.weight": 0.009843840263783932,
+  "blk.1.post_ffw_norm.weight": 0.028892911970615387,
+  "blk.1.post_norm.weight": 0.010935124009847641,
+  "blk.10.altup_correct_coef.weight": 0.02878672070801258,
+  "blk.10.altup_predict_coef.weight": 0.08180791139602661,
+  "blk.10.altup_router_norm.weight": 0.0010043787769973278,
+  "blk.10.attn_k_norm.weight": 0.11192286014556885,
+  "blk.10.attn_norm.weight": 0.009170284494757652,
+  "blk.10.attn_q_norm.weight": 0.1149241030216217,
+  "blk.10.ffn_norm.weight": 0.04731452465057373,
+  "blk.10.laurel_post_norm.weight": 0.002032314660027623,
+  "blk.10.post_attention_norm.weight": 0.004212494008243084,
+  "blk.10.post_ffw_norm.weight": 0.019646327942609787,
+  "blk.10.post_norm.weight": 0.016520408913493156,
+  "blk.11.altup_correct_coef.weight": 0.048558469861745834,
+  "blk.11.altup_predict_coef.weight": 0.026803500950336456,
+  "blk.11.altup_router_norm.weight": 0.0011333409929648042,
+  "blk.11.attn_k_norm.weight": 0.1005668193101883,
+  "blk.11.attn_norm.weight": 0.013215187937021255,
+  "blk.11.attn_q_norm.weight": 0.10135269165039062,
+  "blk.11.ffn_norm.weight": 0.006364649161696434,
+  "blk.11.laurel_post_norm.weight": 0.010538733564317226,
+  "blk.11.post_attention_norm.weight": 0.005694143939763308,
+  "blk.11.post_ffw_norm.weight": 0.02668844908475876,
+  "blk.11.post_norm.weight": 0.008678404614329338,
+  "blk.12.altup_correct_coef.weight": 0.0332978218793869,
+  "blk.12.altup_predict_coef.weight": 0.01775539107620716,
+  "blk.12.attn_k_norm.weight": 0.09643936157226562,
+  "blk.12.attn_norm.weight": 0.013368122279644012,
+  "blk.12.attn_q_norm.weight": 0.13484664261341095,
+  "blk.12.ffn_norm.weight": 0.006475931033492088,
+  "blk.12.laurel_post_norm.weight": 0.007355401758104563,
+  "blk.12.post_attention_norm.weight": 0.0016023158095777035,
+  "blk.12.post_ffw_norm.weight": 0.009627247229218483,
+  "blk.12.post_norm.weight": 0.008345099166035652,
+  "blk.13.altup_correct_coef.weight": 0.019064918160438538,
+  "blk.13.altup_correct_scale.weight": 0.0012033707462251186,
+  "blk.13.altup_predict_coef.weight": 0.012778909876942635,
+  "blk.13.altup_router_norm.weight": 0.0010633363854140043,
+  "blk.13.attn_k_norm.weight": 0.09470533579587936,
+  "blk.13.attn_norm.weight": 0.007077792659401894,
+  "blk.13.attn_q_norm.weight": 0.09702477604150772,
+  "blk.13.ffn_norm.weight": 0.0071653034538030624,
+  "blk.13.laurel_post_norm.weight": 0.007689208723604679,
+  "blk.13.post_attention_norm.weight": 0.0018897091504186392,
+  "blk.13.post_ffw_norm.weight": 0.012782495468854904,
+  "blk.13.post_norm.weight": 0.007689457852393389,
+  "blk.14.altup_correct_coef.weight": 0.024292442947626114,
+  "blk.14.altup_predict_coef.weight": 0.015362126752734184,
+  "blk.14.attn_k_norm.weight": 0.14044690132141113,
+  "blk.14.attn_norm.weight": 0.016586745157837868,
+  "blk.14.attn_q_norm.weight": 0.10135269165039062,
+  "blk.14.ffn_norm.weight": 0.005406450480222702,
+  "blk.14.laurel_post_norm.weight": 0.004885293543338776,
+  "blk.14.post_attention_norm.weight": 0.0021961117163300514,
+  "blk.14.post_ffw_norm.weight": 0.013635605573654175,
+  "blk.14.post_norm.weight": 0.007298308424651623,
+  "blk.15.altup_correct_coef.weight": 0.025834206491708755,
+  "blk.15.altup_correct_scale.weight": 0.0011468081502243876,
+  "blk.15.altup_predict_coef.weight": 0.013355779461562634,
+  "blk.15.attn_k_norm.weight": 0.08432061225175858,
+  "blk.15.attn_norm.weight": 0.010033722966909409,
+  "blk.15.attn_q_norm.weight": 0.1051177978515625,
+  "blk.15.ffn_norm.weight": 0.013551115058362484,
+  "blk.15.laurel_post_norm.weight": 0.0049613164737820625,
+  "blk.15.post_ffw_norm.weight": 0.009133026003837585,
+  "blk.15.post_norm.weight": 0.0066724661737680435,
+  "blk.16.altup_correct_coef.weight": 0.02529984898865223,
+  "blk.16.altup_correct_scale.weight": 0.0013487960677593946,
+  "blk.16.altup_predict_coef.weight": 0.006554517894983292,
+  "blk.16.attn_k_norm.weight": 0.10721619427204132,
+  "blk.16.attn_norm.weight": 0.010913390666246414,
+  "blk.16.attn_q_norm.weight": 0.08987781405448914,
+  "blk.16.ffn_norm.weight": 0.0023958291858434677,
+  "blk.16.laurel_post_norm.weight": 0.00316929561085999,
+  "blk.16.post_ffw_norm.weight": 0.004566097166389227,
+  "blk.16.post_norm.weight": 0.0025908062234520912,
+  "blk.17.altup_correct_coef.weight": 0.012606823816895485,
+  "blk.17.altup_correct_scale.weight": 0.0010402236366644502,
+  "blk.17.altup_predict_coef.weight": 0.02646777592599392,
+  "blk.17.altup_router_norm.weight": 0.0010580639354884624,
+  "blk.17.attn_k_norm.weight": 0.09415924549102783,
+  "blk.17.attn_norm.weight": 0.00426251906901598,
+  "blk.17.attn_q_norm.weight": 0.107666015625,
+  "blk.17.ffn_norm.weight": 0.005974177736788988,
+  "blk.17.laurel_post_norm.weight": 0.005660438444465399,
+  "blk.17.post_attention_norm.weight": 0.002208956051617861,
+  "blk.17.post_ffw_norm.weight": 0.010211465880274773,
+  "blk.17.post_norm.weight": 0.02058367058634758,
+  "blk.18.altup_correct_coef.weight": 0.2920192778110504,
+  "blk.18.altup_correct_scale.weight": 0.0010098011698573828,
+  "blk.18.altup_predict_coef.weight": 0.019937394186854362,
+  "blk.18.altup_router_norm.weight": 0.001014915993437171,
+  "blk.18.attn_k_norm.weight": 0.11550313234329224,
+  "blk.18.attn_norm.weight": 0.015146750956773758,
+  "blk.18.attn_q_norm.weight": 0.09832602739334106,
+  "blk.18.ffn_norm.weight": 0.06573265790939331,
+  "blk.18.laurel_post_norm.weight": 0.0134509839117527,
+  "blk.18.post_attention_norm.weight": 0.005287903361022472,
+  "blk.18.post_ffw_norm.weight": 0.02524562180042267,
+  "blk.18.post_norm.weight": 0.013381047174334526,
+  "blk.19.altup_correct_coef.weight": 0.03077954612672329,
+  "blk.19.altup_predict_coef.weight": 0.06160297617316246,
+  "blk.19.altup_router_norm.weight": 0.001133927027694881,
+  "blk.19.attn_k_norm.weight": 0.08929824829101562,
+  "blk.19.attn_norm.weight": 0.01701953448355198,
+  "blk.19.attn_q_norm.weight": 0.08949524164199829,
+  "blk.19.ffn_norm.weight": 0.07149997353553772,
+  "blk.19.laurel_post_norm.weight": 0.008745267987251282,
+  "blk.19.post_attention_norm.weight": 0.002677557524293661,
+  "blk.19.post_ffw_norm.weight": 0.02652481570839882,
+  "blk.19.post_norm.weight": 0.004357961472123861,
+  "blk.2.altup_correct_coef.weight": 0.024938924238085747,
+  "blk.2.altup_predict_coef.weight": 0.05733742564916611,
+  "blk.2.attn_k_norm.weight": 0.09188187122344971,
+  "blk.2.attn_norm.weight": 0.005167034920305014,
+  "blk.2.attn_q_norm.weight": 0.09828861057758331,
+  "blk.2.ffn_norm.weight": 0.06933482736349106,
+  "blk.2.laurel_post_norm.weight": 0.01813030242919922,
+  "blk.2.post_attention_norm.weight": 0.027692198753356934,
+  "blk.2.post_ffw_norm.weight": 0.031049039214849472,
+  "blk.2.post_norm.weight": 0.0068481541238725185,
+  "blk.20.altup_correct_coef.weight": 0.032099172472953796,
+  "blk.20.altup_predict_coef.weight": 0.027169130742549896,
+  "blk.20.altup_router_norm.weight": 0.0013098735362291336,
+  "blk.20.attn_k_norm.weight": 0.09822434931993484,
+  "blk.20.attn_norm.weight": 0.01372511126101017,
+  "blk.20.attn_q_norm.weight": 0.10130437463521957,
+  "blk.20.ffn_norm.weight": 0.0021773013286292553,
+  "blk.20.laurel_post_norm.weight": 0.00786617025732994,
+  "blk.20.post_attention_norm.weight": 0.004209596198052168,
+  "blk.20.post_ffw_norm.weight": 0.02129276841878891,
+  "blk.20.post_norm.weight": 0.009616591967642307,
+  "blk.21.altup_correct_coef.weight": 0.0051824552938342094,
+  "blk.21.altup_correct_scale.weight": 0.0011304228100925684,
+  "blk.21.altup_predict_coef.weight": 0.013807537034153938,
+  "blk.21.attn_k_norm.weight": 0.10157313942909241,
+  "blk.21.attn_norm.weight": 0.017976917326450348,
+  "blk.21.attn_q_norm.weight": 0.09826511144638062,
+  "blk.21.ffn_norm.weight": 0.0049193548038601875,
+  "blk.21.laurel_post_norm.weight": 0.004115720745176077,
+  "blk.21.post_attention_norm.weight": 0.0029735700227320194,
+  "blk.21.post_ffw_norm.weight": 0.009016485884785652,
+  "blk.21.post_norm.weight": 0.010525419376790524,
+  "blk.22.altup_correct_coef.weight": 0.014516734518110752,
+  "blk.22.altup_predict_coef.weight": 0.015030886977910995,
+  "blk.22.altup_router_norm.weight": 0.001059613423421979,
+  "blk.22.attn_k_norm.weight": 0.07951745390892029,
+  "blk.22.attn_norm.weight": 0.01711045764386654,
+  "blk.22.attn_q_norm.weight": 0.10333289206027985,
+  "blk.22.ffn_norm.weight": 0.0033225740771740675,
+  "blk.22.laurel_post_norm.weight": 0.0032939594238996506,
+  "blk.22.post_attention_norm.weight": 0.002597658894956112,
+  "blk.22.post_ffw_norm.weight": 0.0070022642612457275,
+  "blk.22.post_norm.weight": 0.007517840247601271,
+  "blk.23.altup_correct_coef.weight": 0.06113852933049202,
+  "blk.23.altup_correct_scale.weight": 0.0012070299126207829,
+  "blk.23.altup_predict_coef.weight": 0.027759406715631485,
+  "blk.23.altup_router_norm.weight": 0.0012331587495282292,
+  "blk.23.attn_k_norm.weight": 0.10427132248878479,
+  "blk.23.attn_norm.weight": 0.011737316846847534,
+  "blk.23.attn_q_norm.weight": 0.11682510375976562,
+  "blk.23.ffn_norm.weight": 0.014519022777676582,
+  "blk.23.laurel_post_norm.weight": 0.003933262545615435,
+  "blk.23.post_attention_norm.weight": 0.006311592645943165,
+  "blk.23.post_ffw_norm.weight": 0.0022391141392290592,
+  "blk.23.post_norm.weight": 0.0021503521129488945,
+  "blk.24.altup_correct_coef.weight": 0.05624468997120857,
+  "blk.24.altup_correct_scale.weight": 0.0011325664818286896,
+  "blk.24.altup_predict_coef.weight": 0.056653834879398346,
+  "blk.24.altup_router_norm.weight": 0.0014129072660580277,
+  "blk.24.attn_k_norm.weight": 0.08929824829101562,
+  "blk.24.attn_norm.weight": 0.051443539559841156,
+  "blk.24.attn_q_norm.weight": 0.11838231980800629,
+  "blk.24.ffn_norm.weight": 0.002456632209941745,
+  "blk.24.laurel_post_norm.weight": 0.005488025955855846,
+  "blk.24.post_attention_norm.weight": 0.0036894185468554497,
+  "blk.24.post_ffw_norm.weight": 0.03393886610865593,
+  "blk.24.post_norm.weight": 0.0028739681001752615,
+  "blk.25.altup_correct_coef.weight": 0.06828097999095917,
+  "blk.25.altup_correct_scale.weight": 0.0010344005422666669,
+  "blk.25.altup_predict_coef.weight": 0.021626433357596397,
+  "blk.25.attn_k_norm.weight": 0.09817886352539062,
+  "blk.25.attn_norm.weight": 0.01279195211827755,
+  "blk.25.attn_q_norm.weight": 0.1051177978515625,
+  "blk.25.ffn_norm.weight": 0.01231754943728447,
+  "blk.25.laurel_post_norm.weight": 0.0068725598976016045,
+  "blk.25.post_attention_norm.weight": 0.009454607963562012,
+  "blk.25.post_ffw_norm.weight": 0.025516552850604057,
+  "blk.25.post_norm.weight": 0.01868751458823681,
+  "blk.26.altup_correct_coef.weight": 0.017804313451051712,
+  "blk.26.altup_predict_coef.weight": 0.021836627274751663,
+  "blk.26.altup_router_norm.weight": 0.0011735577136278152,
+  "blk.26.attn_k_norm.weight": 0.1208648681640625,
+  "blk.26.attn_norm.weight": 0.0261674914509058,
+  "blk.26.attn_q_norm.weight": 0.11108460277318954,
+  "blk.26.ffn_norm.weight": 0.008761745877563953,
+  "blk.26.laurel_post_norm.weight": 0.007005876395851374,
+  "blk.26.post_attention_norm.weight": 0.008955828845500946,
+  "blk.26.post_ffw_norm.weight": 0.021750018000602722,
+  "blk.26.post_norm.weight": 0.0046710120514035225,
+  "blk.27.altup_correct_coef.weight": 0.1086704283952713,
+  "blk.27.altup_correct_scale.weight": 0.0012699344661086798,
+  "blk.27.altup_predict_coef.weight": 0.011591915041208267,
+  "blk.27.attn_k_norm.weight": 0.10307846963405609,
+  "blk.27.attn_norm.weight": 0.016651295125484467,
+  "blk.27.attn_q_norm.weight": 0.107666015625,
+  "blk.27.ffn_norm.weight": 0.005841312929987907,
+  "blk.27.laurel_post_norm.weight": 0.004395483992993832,
+  "blk.27.post_attention_norm.weight": 0.009907178580760956,
+  "blk.27.post_ffw_norm.weight": 0.016572505235671997,
+  "blk.27.post_norm.weight": 0.014909767545759678,
+  "blk.28.altup_correct_coef.weight": 0.08605003356933594,
+  "blk.28.altup_predict_coef.weight": 0.029686160385608673,
+  "blk.28.attn_k_norm.weight": 0.1036214530467987,
+  "blk.28.attn_norm.weight": 0.002834663726389408,
+  "blk.28.attn_q_norm.weight": 0.100995272397995,
+  "blk.28.ffn_norm.weight": 0.0259978249669075,
+  "blk.28.laurel_post_norm.weight": 0.006553381681442261,
+  "blk.28.post_attention_norm.weight": 0.013294805772602558,
+  "blk.28.post_ffw_norm.weight": 0.021569624543190002,
+  "blk.28.post_norm.weight": 0.03025108575820923,
+  "blk.29.altup_correct_coef.weight": 0.01603982225060463,
+  "blk.29.altup_predict_coef.weight": 0.09236082434654236,
+  "blk.29.altup_router_norm.weight": 0.0014433003962039948,
+  "blk.29.attn_k_norm.weight": 0.08929824829101562,
+  "blk.29.attn_norm.weight": 0.0949346125125885,
+  "blk.29.attn_q_norm.weight": 0.12659430503845215,
+  "blk.29.ffn_norm.weight": 0.003606412559747696,
+  "blk.29.laurel_post_norm.weight": 0.012008676305413246,
+  "blk.29.post_attention_norm.weight": 0.0031318035908043385,
+  "blk.29.post_ffw_norm.weight": 0.01790812984108925,
+  "blk.29.post_norm.weight": 0.0020071726758033037,
+  "blk.3.altup_correct_coef.weight": 0.0752125009894371,
+  "blk.3.altup_correct_scale.weight": 0.001180875115096569,
+  "blk.3.altup_predict_coef.weight": 0.07927754521369934,
+  "blk.3.altup_router_norm.weight": 0.0010531307198107243,
+  "blk.3.attn_k_norm.weight": 0.11730901896953583,
+  "blk.3.attn_norm.weight": 0.013092802837491035,
+  "blk.3.attn_q_norm.weight": 0.12222671508789062,
+  "blk.3.ffn_norm.weight": 0.021045785397291183,
+  "blk.3.laurel_post_norm.weight": 0.021873947232961655,
+  "blk.3.post_attention_norm.weight": 0.01475809421390295,
+  "blk.3.post_ffw_norm.weight": 0.01723485067486763,
+  "blk.3.post_norm.weight": 0.008442981168627739,
+  "blk.4.altup_correct_coef.weight": 0.10563034564256668,
+  "blk.4.altup_correct_scale.weight": 0.0010955954203382134,
+  "blk.4.altup_predict_coef.weight": 0.05045340955257416,
+  "blk.4.attn_k_norm.weight": 0.12493042647838593,
+  "blk.4.attn_norm.weight": 0.01587524265050888,
+  "blk.4.attn_q_norm.weight": 0.10108817368745804,
+  "blk.4.ffn_norm.weight": 0.350830078125,
+  "blk.4.laurel_post_norm.weight": 0.007897811010479927,
+  "blk.4.post_attention_norm.weight": 0.024973683059215546,
+  "blk.4.post_ffw_norm.weight": 0.025156967341899872,
+  "blk.4.post_norm.weight": 0.003920366056263447,
+  "blk.5.altup_correct_coef.weight": 0.09166374802589417,
+  "blk.5.altup_predict_coef.weight": 0.08692949265241623,
+  "blk.5.altup_router_norm.weight": 0.0011012775357812643,
+  "blk.5.attn_k_norm.weight": 0.0896359533071518,
+  "blk.5.attn_norm.weight": 0.011833155527710915,
+  "blk.5.attn_q_norm.weight": 0.11046986281871796,
+  "blk.5.ffn_norm.weight": 0.015732252970337868,
+  "blk.5.laurel_post_norm.weight": 0.013860318809747696,
+  "blk.5.post_attention_norm.weight": 0.01637852005660534,
+  "blk.5.post_ffw_norm.weight": 0.03147400543093681,
+  "blk.5.post_norm.weight": 0.009187418036162853,
+  "blk.6.altup_correct_coef.weight": 0.14616888761520386,
+  "blk.6.altup_predict_coef.weight": 0.11939781904220581,
+  "blk.6.altup_router_norm.weight": 0.0014287685044109821,
+  "blk.6.attn_k_norm.weight": 0.09643936157226562,
+  "blk.6.attn_norm.weight": 0.01296088844537735,
+  "blk.6.attn_q_norm.weight": 0.09968347102403641,
+  "blk.6.ffn_norm.weight": 0.009463489055633545,
+  "blk.6.laurel_post_norm.weight": 0.03178753703832626,
+  "blk.6.post_attention_norm.weight": 0.005401149392127991,
+  "blk.6.post_ffw_norm.weight": 0.03165392205119133,
+  "blk.6.post_norm.weight": 0.02152802050113678,
+  "blk.7.altup_correct_coef.weight": 0.04142257198691368,
+  "blk.7.altup_correct_scale.weight": 0.0010017751483246684,
+  "blk.7.altup_predict_coef.weight": 0.10675885528326035,
+  "blk.7.altup_router_norm.weight": 0.0010727065382525325,
+  "blk.7.attn_k_norm.weight": 0.09869585186243057,
+  "blk.7.attn_norm.weight": 0.012724733911454678,
+  "blk.7.attn_q_norm.weight": 0.11068921536207199,
+  "blk.7.ffn_norm.weight": 0.22009393572807312,
+  "blk.7.laurel_post_norm.weight": 0.0116146644577384,
+  "blk.7.post_attention_norm.weight": 0.013162895105779171,
+  "blk.7.post_ffw_norm.weight": 0.026698099449276924,
+  "blk.7.post_norm.weight": 0.004757535643875599,
+  "blk.8.altup_correct_coef.weight": 0.5464566946029663,
+  "blk.8.altup_predict_coef.weight": 0.04747381433844566,
+  "blk.8.attn_k_norm.weight": 0.09283447265625,
+  "blk.8.attn_norm.weight": 0.00955065805464983,
+  "blk.8.attn_q_norm.weight": 0.12126293033361435,
+  "blk.8.ffn_norm.weight": 0.1749458909034729,
+  "blk.8.laurel_post_norm.weight": 0.011732309125363827,
+  "blk.8.post_attention_norm.weight": 0.009006173349916935,
+  "blk.8.post_ffw_norm.weight": 0.03562398999929428,
+  "blk.8.post_norm.weight": 0.002628428628668189,
+  "blk.9.altup_correct_coef.weight": 0.26197072863578796,
+  "blk.9.altup_predict_coef.weight": 0.15620073676109314,
+  "blk.9.altup_router_norm.weight": 0.0010180955287069082,
+  "blk.9.attn_k_norm.weight": 0.1001129150390625,
+  "blk.9.attn_norm.weight": 0.026852738112211227,
+  "blk.9.attn_q_norm.weight": 0.12977847456932068,
+  "blk.9.ffn_norm.weight": 0.13278645277023315,
+  "blk.9.laurel_post_norm.weight": 0.016886375844478607,
+  "blk.9.post_attention_norm.weight": 0.0057889968156814575,
+  "blk.9.post_ffw_norm.weight": 0.020975086838006973,
+  "blk.9.post_norm.weight": 0.009723475202918053,
+  "output_norm.weight": 0.03935457020998001,
+  "per_layer_proj_norm.weight": 0.01000913791358471
+ },
+ "tensors": {
+  "altup_proj.weight": {
+   "add": 0.0,
+   "mse": 6.074186785554048e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 926,
+     "transpose": false,
+     "type": 9
+    },
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 935,
+     "transpose": false,
+     "type": 9
+    },
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 944,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "altup_unembd_proj.weight": {
+   "add": 0.0,
+   "mse": 2.4460912754875608e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6765,
+     "transpose": false,
+     "type": 9
+    },
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6774,
+     "transpose": false,
+     "type": 9
+    },
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6783,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.0.altup_router.weight": {
+   "add": 0.0,
+   "mse": 1.3259632396511734e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 382,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.0.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0009332477347925305,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.0.attn_k.weight": {
+   "add": 0.0,
+   "mse": 7.679361260670703e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1014,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.0.attn_output.weight": {
+   "add": 0.0,
+   "mse": 1.3518801097234245e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1118,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.0.attn_q.weight": {
+   "add": 0.0,
+   "mse": 5.998736469337018e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1005,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.0.attn_v.weight": {
+   "add": 0.0,
+   "mse": 5.4888741942704655e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1023,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.0.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.1811126771353884e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1176,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.0.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.2683448403549846e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1157,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.0.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.20879458336276e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1160,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.0.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 5.483349923451897e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1207,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.0.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 4.846661977353506e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1135,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.0.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.0007154737832024693,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1137,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.0.proj.weight": {
+   "add": 0.0,
+   "mse": 4.1512401367072016e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1211,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.1.altup_router.weight": {
+   "add": 0.0,
+   "mse": 2.163616409234237e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 379,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.1.attn_k.weight": {
+   "add": 0.0,
+   "mse": 1.531517227704171e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1257,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.1.attn_output.weight": {
+   "add": 0.0,
+   "mse": 1.3421259609458502e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1331,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.1.attn_q.weight": {
+   "add": 0.0,
+   "mse": 9.894984032143839e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1248,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.1.attn_v.weight": {
+   "add": 0.0,
+   "mse": 1.276412331208121e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1266,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.1.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.00202862288279e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1389,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.1.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.4263035154726822e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1370,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.1.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.497810171713354e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1373,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.1.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 5.590564342128346e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1420,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.1.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 7.152620128181297e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1348,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.1.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.0001160324682132341,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1350,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.1.proj.weight": {
+   "add": 0.0,
+   "mse": 4.208594691590406e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1424,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.10.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009585018851794302,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.10.altup_router.weight": {
+   "add": 0.0,
+   "mse": 4.030852869618684e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 352,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.10.attn_k.weight": {
+   "add": 0.0,
+   "mse": 2.451650652801618e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3185,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.10.attn_output.weight": {
+   "add": 0.0,
+   "mse": 1.132064608100336e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3259,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.10.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.540913581266068e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3176,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.10.attn_v.weight": {
+   "add": 0.0,
+   "mse": 2.4399707399425097e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3194,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.10.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 3.2033185561886057e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3307,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.10.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.5754949345136993e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3298,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.10.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.635547960177064e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3301,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.10.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 7.66071298130555e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3338,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.10.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 3.6869905670755543e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3276,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.10.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 5.9366924688220024e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3278,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.10.proj.weight": {
+   "add": 0.0,
+   "mse": 5.9233163483440876e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3342,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.11.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009112543193623424,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.11.altup_router.weight": {
+   "add": 0.0,
+   "mse": 3.0896881071384996e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 349,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.11.attn_k.weight": {
+   "add": 0.0,
+   "mse": 5.992469141347101e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3388,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.11.attn_output.weight": {
+   "add": 0.0,
+   "mse": 3.457499587966595e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3462,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.11.attn_q.weight": {
+   "add": 0.0,
+   "mse": 5.402131591836223e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3379,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.11.attn_v.weight": {
+   "add": 0.0,
+   "mse": 4.6891645979485475e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3397,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.11.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.0705078895844053e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3510,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.11.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.3876180673833005e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3501,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.11.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.3629800378112122e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3504,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.11.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 1.073394923878368e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3541,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.11.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 3.2337069569621235e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3479,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.11.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.0005036625661887228,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3481,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.11.proj.weight": {
+   "add": 0.0,
+   "mse": 6.844016024842858e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3545,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.12.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009192527504637837,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.12.altup_router.weight": {
+   "add": 0.0,
+   "mse": 3.71335081581492e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 346,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.12.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0008714698487892747,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.12.attn_k.weight": {
+   "add": 0.0,
+   "mse": 1.0272995496052317e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3591,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.12.attn_output.weight": {
+   "add": 0.0,
+   "mse": 1.851565139077138e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3665,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.12.attn_q.weight": {
+   "add": 0.0,
+   "mse": 7.637866474397015e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3582,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.12.attn_v.weight": {
+   "add": 0.0,
+   "mse": 9.409412086824887e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3600,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.12.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.004049747483805e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3713,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.12.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.565361708344426e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3704,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.12.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.6740385035518557e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3707,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.12.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 7.183047273429111e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3744,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.12.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 3.0672374577989103e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3682,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.12.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 3.0453944418695755e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3684,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.12.proj.weight": {
+   "add": 0.0,
+   "mse": 6.142619531601667e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3748,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.13.altup_router.weight": {
+   "add": 0.0,
+   "mse": 2.658639641595073e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 343,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.13.attn_k.weight": {
+   "add": 0.0,
+   "mse": 2.0590909116435796e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3794,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.13.attn_output.weight": {
+   "add": 0.0,
+   "mse": 6.66378309688298e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3868,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.13.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.2359483662294224e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3785,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.13.attn_v.weight": {
+   "add": 0.0,
+   "mse": 1.93292635231046e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3803,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.13.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.7751639208872803e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3916,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.13.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.4531963643094059e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3907,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.13.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.683229857007973e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3910,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.13.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 7.165238457673695e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3947,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.13.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 2.6203888410236686e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3885,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.13.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 3.599866249714978e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3887,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.13.proj.weight": {
+   "add": 0.0,
+   "mse": 0.00013243185821920633,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3951,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.14.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009550275281071663,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 543,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.14.altup_router.weight": {
+   "add": 0.0,
+   "mse": 5.152815720066428e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 340,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.14.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0009761927649378777,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.14.attn_k.weight": {
+   "add": 0.0,
+   "mse": 3.915122942999005e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3997,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.14.attn_output.weight": {
+   "add": 0.0,
+   "mse": 1.715048165351618e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4071,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.14.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.9774826796492562e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3988,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.14.attn_v.weight": {
+   "add": 0.0,
+   "mse": 3.1837123970035464e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4006,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.14.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.1928690330241807e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4119,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.14.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.4648403521277942e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4110,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.14.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.491743023507297e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4113,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.14.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 7.235792054416379e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4150,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.14.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 2.8918648240505718e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4088,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.14.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.0004889584379270673,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4090,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.14.proj.weight": {
+   "add": 0.0,
+   "mse": 4.441205965122208e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4154,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.15.altup_router.weight": {
+   "add": 0.0,
+   "mse": 6.13867086940445e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 337,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.15.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0009868068154901266,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.15.attn_k.weight": {
+   "add": 0.0,
+   "mse": 1.3803245565213729e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4200,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.15.attn_output.weight": {
+   "add": 0.0,
+   "mse": 3.0561964194930624e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4274,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.15.attn_q.weight": {
+   "add": 0.0,
+   "mse": 9.18834120966494e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4191,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.15.attn_v.weight": {
+   "add": 0.0,
+   "mse": 1.3098204362904653e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4209,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.15.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 1.8494710047889384e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4322,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.15.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.7242360627278686e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4313,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.15.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.554864866193384e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4316,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.15.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 7.832494702597614e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4353,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.15.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 1.6758509445935488e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4291,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.15.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.0003003640740644187,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4293,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.15.post_attention_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0008778144838288426,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 523,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.15.proj.weight": {
+   "add": 0.0,
+   "mse": 3.438333442318253e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4357,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.16.altup_router.weight": {
+   "add": 0.0,
+   "mse": 6.28261041129008e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 334,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.16.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0008933257777243853,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.16.attn_k.weight": {
+   "add": 0.0,
+   "mse": 1.7622798623051494e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4403,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.16.attn_output.weight": {
+   "add": 0.0,
+   "mse": 1.232026352226967e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4477,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.16.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.1636585441010538e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4394,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.16.attn_v.weight": {
+   "add": 0.0,
+   "mse": 1.6328662240994163e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4412,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.16.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.0108709577471018e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4525,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.16.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.3495776329364162e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4516,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.16.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.2712896932498552e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4519,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.16.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 9.870430403680075e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4556,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.16.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 3.5340103750058915e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4494,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.16.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 5.820079968543723e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4496,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.16.post_attention_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0005078477552160621,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 515,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.16.proj.weight": {
+   "add": 0.0,
+   "mse": 4.733840614790097e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4560,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.17.altup_router.weight": {
+   "add": 0.0,
+   "mse": 7.611401088070124e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 331,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.17.attn_k.weight": {
+   "add": 0.0,
+   "mse": 4.857061867369339e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4606,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.17.attn_output.weight": {
+   "add": 0.0,
+   "mse": 3.21654829349427e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4680,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.17.attn_q.weight": {
+   "add": 0.0,
+   "mse": 4.623740551323863e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4597,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.17.attn_v.weight": {
+   "add": 0.0,
+   "mse": 4.223257292323979e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4615,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.17.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.8932529403391527e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4728,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.17.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.721130684018135e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4719,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.17.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.88055510079721e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4722,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.17.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 9.002278602565639e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4759,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.17.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 1.9326069377711974e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4697,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.17.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.0003344666038174182,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4699,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.17.proj.weight": {
+   "add": 0.0,
+   "mse": 6.0926620790269226e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4763,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.18.altup_router.weight": {
+   "add": 0.0,
+   "mse": 6.638144259341061e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 328,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.18.attn_k.weight": {
+   "add": 0.0,
+   "mse": 1.2733999028569087e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4809,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.18.attn_output.weight": {
+   "add": 0.0,
+   "mse": 1.1040005119866692e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4883,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.18.attn_q.weight": {
+   "add": 0.0,
+   "mse": 9.056792805495206e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4800,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.18.attn_v.weight": {
+   "add": 0.0,
+   "mse": 1.2094008525309619e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4818,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.18.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.7456044335849583e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4931,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.18.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.6792997485026717e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4922,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.18.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.67936559591908e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4925,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.18.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 9.482297173235565e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4962,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.18.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 2.548865450080484e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4900,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.18.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.00047363710473291576,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4902,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.18.proj.weight": {
+   "add": 0.0,
+   "mse": 6.325742288026959e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4966,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.19.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009470459772273898,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.19.altup_router.weight": {
+   "add": 0.0,
+   "mse": 0.00010535163164604455,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 325,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.19.attn_k.weight": {
+   "add": 0.0,
+   "mse": 7.870897206885274e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5012,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.19.attn_output.weight": {
+   "add": 0.0,
+   "mse": 1.3951016626378987e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5086,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.19.attn_q.weight": {
+   "add": 0.0,
+   "mse": 7.781300155329518e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5003,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.19.attn_v.weight": {
+   "add": 0.0,
+   "mse": 6.330655651254347e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5021,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.19.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 3.32836725647212e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5134,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.19.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.7876185665954836e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5125,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.19.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.8104354239767417e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5128,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.19.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 7.220117822726024e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5165,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.19.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 2.098884351653396e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5103,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.19.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 1.898762275232002e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5105,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.19.proj.weight": {
+   "add": 0.0,
+   "mse": 7.26234502508305e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5169,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.2.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009149715770035982,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.2.altup_router.weight": {
+   "add": 0.0,
+   "mse": 3.7800855352543294e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 376,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.2.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0009332986082881689,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.2.attn_k.weight": {
+   "add": 0.0,
+   "mse": 2.2325446479953825e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1470,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.2.attn_output.weight": {
+   "add": 0.0,
+   "mse": 1.8128421288565733e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1544,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.2.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.4504912542179227e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1461,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.2.attn_v.weight": {
+   "add": 0.0,
+   "mse": 2.1338082660804503e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1479,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.2.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 1.7754375676304335e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1602,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.2.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.593243723618798e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1583,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.2.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.4573027328879107e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1586,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.2.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 5.427567884908058e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1633,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.2.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 1.4719516002514865e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1561,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.2.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.00018882092263083905,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1563,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.2.proj.weight": {
+   "add": 0.0,
+   "mse": 5.17721964570228e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1637,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.20.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009770856704562902,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.20.altup_router.weight": {
+   "add": 0.0,
+   "mse": 7.10497988620773e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 322,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.20.attn_k.weight": {
+   "add": 0.0,
+   "mse": 0.0004631462215911597,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2972,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.20.attn_output.weight": {
+   "add": 0.0,
+   "mse": 7.307069154194323e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5244,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.20.attn_q.weight": {
+   "add": 0.0,
+   "mse": 7.4649556154327e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5206,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.20.attn_v.weight": {
+   "add": 0.0,
+   "mse": 0.0004616528458427638,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2972,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.20.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.7423825486039277e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5292,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.20.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.4545254089171067e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5283,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.20.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.4732995623489842e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5286,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.20.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 1.0362333341618069e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5323,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.20.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 4.515502496360568e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5261,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.20.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 5.567861080635339e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5263,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.20.proj.weight": {
+   "add": 0.0,
+   "mse": 5.148395212017931e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5327,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.21.altup_router.weight": {
+   "add": 0.0,
+   "mse": 5.176581908017397e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 319,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.21.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0009576906450092793,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.21.attn_k.weight": {
+   "add": 0.0,
+   "mse": 0.00046411954099312425,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3997,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.21.attn_output.weight": {
+   "add": 0.0,
+   "mse": 4.226195869705407e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5402,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.21.attn_q.weight": {
+   "add": 0.0,
+   "mse": 2.1186551748542115e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5364,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.21.attn_v.weight": {
+   "add": 0.0,
+   "mse": 0.0004629315808415413,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3997,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.21.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.5176466351695126e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5450,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.21.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.8860268028220162e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5441,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.21.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.6514755770913325e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5444,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.21.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 1.268214691663161e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5481,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.21.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 1.540029188618064e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5419,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.21.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.00024709844728931785,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5421,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.21.proj.weight": {
+   "add": 0.0,
+   "mse": 5.2112434786977246e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5485,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.22.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009949677623808384,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 543,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.22.altup_router.weight": {
+   "add": 0.0,
+   "mse": 9.339494863525033e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 316,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.22.attn_k.weight": {
+   "add": 0.0,
+   "mse": 0.0004718572599813342,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2555,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.22.attn_output.weight": {
+   "add": 0.0,
+   "mse": 6.198843493621098e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5560,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.22.attn_q.weight": {
+   "add": 0.0,
+   "mse": 6.656964160356438e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5522,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.22.attn_v.weight": {
+   "add": 0.0,
+   "mse": 0.00047915687900967896,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4615,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.22.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.3243355826707557e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5608,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.22.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.8558683223091066e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5599,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.22.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.8723188986768946e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5602,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.22.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 1.0282499715685844e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5639,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.22.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 1.7747148376656696e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5577,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.22.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.00029341448680497706,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5579,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.22.proj.weight": {
+   "add": 0.0,
+   "mse": 5.775124009232968e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5643,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.23.altup_router.weight": {
+   "add": 0.0,
+   "mse": 0.00018142390763387084,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 313,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.23.attn_k.weight": {
+   "add": 0.0,
+   "mse": 0.000465228280518204,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2972,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.23.attn_output.weight": {
+   "add": 0.0,
+   "mse": 7.690951861150097e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5718,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.23.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.0562514034972992e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5680,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.23.attn_v.weight": {
+   "add": 0.0,
+   "mse": 0.0004715637187473476,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3997,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.23.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.008142473641783e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5766,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.23.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.6328893252648413e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5757,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.23.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.525643438071711e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5760,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.23.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 1.0926934010058176e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5797,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.23.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 5.9909648371103685e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5735,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.23.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 8.653778786538169e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5737,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.23.proj.weight": {
+   "add": 0.0,
+   "mse": 7.475310849258676e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5801,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.24.altup_router.weight": {
+   "add": 0.0,
+   "mse": 0.0001510090078227222,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 310,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.24.attn_k.weight": {
+   "add": 0.0,
+   "mse": 0.00047726358752697706,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3591,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.24.attn_output.weight": {
+   "add": 0.0,
+   "mse": 4.58529575553257e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5876,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.24.attn_q.weight": {
+   "add": 0.0,
+   "mse": 6.131818736321293e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5838,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.24.attn_v.weight": {
+   "add": 0.0,
+   "mse": 0.0004767559585161507,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4200,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.24.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.8445685984479496e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5924,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.24.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.6709713236195967e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5915,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.24.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.4190891306498088e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5918,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.24.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 1.0332685633329675e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5955,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.24.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 3.7202589737717062e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5893,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.24.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 4.304897447582334e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5895,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.24.proj.weight": {
+   "add": 0.0,
+   "mse": 7.945477409521118e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5959,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.25.altup_router.weight": {
+   "add": 0.0,
+   "mse": 7.739086140645668e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 307,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.25.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0009729214943945408,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.25.attn_k.weight": {
+   "add": 0.0,
+   "mse": 0.0004647901514545083,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3997,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.25.attn_output.weight": {
+   "add": 0.0,
+   "mse": 2.0064780983375385e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6034,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.25.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.9875862562912516e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5996,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.25.attn_v.weight": {
+   "add": 0.0,
+   "mse": 0.0004764359619002789,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 5021,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.25.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 3.0302314826258225e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6082,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.25.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.7980895790969953e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6073,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.25.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.575795977259986e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6076,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.25.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 1.3504572052625008e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6113,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.25.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 2.275232327519916e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6051,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.25.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.0003890679799951613,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6053,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.25.proj.weight": {
+   "add": 0.0,
+   "mse": 7.920627831481397e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6117,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.26.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009787536691874266,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 543,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.26.altup_router.weight": {
+   "add": 0.0,
+   "mse": 9.231938020093367e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 304,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.26.attn_k.weight": {
+   "add": 0.0,
+   "mse": 0.0004733986861538142,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4606,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.26.attn_output.weight": {
+   "add": 0.0,
+   "mse": 8.132441507768817e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6192,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.26.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.1167363481945358e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6154,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.26.attn_v.weight": {
+   "add": 0.0,
+   "mse": 0.00046995855518616736,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3997,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.26.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.756756657618098e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6240,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.26.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 2.1151005057618022e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6231,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.26.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 2.193621185142547e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6234,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.26.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 1.4039066627447028e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6271,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.26.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 7.852143426134717e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6209,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.26.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 8.390310540562496e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6211,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.26.proj.weight": {
+   "add": 0.0,
+   "mse": 8.44769601826556e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6275,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.27.altup_router.weight": {
+   "add": 0.0,
+   "mse": 0.00019635228090919554,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 301,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.27.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0009368200553581119,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.27.attn_k.weight": {
+   "add": 0.0,
+   "mse": 0.0004664002335630357,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3997,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.27.attn_output.weight": {
+   "add": 0.0,
+   "mse": 1.9374188923393376e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6350,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.27.attn_q.weight": {
+   "add": 0.0,
+   "mse": 2.183063406846486e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6312,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.27.attn_v.weight": {
+   "add": 0.0,
+   "mse": 0.00046728228335268795,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3997,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.27.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.911271849370678e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6398,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.27.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 2.0961599147995003e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6389,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.27.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 2.156033951905556e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6392,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.27.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 2.0111057892790996e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6429,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.27.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 2.7095622499473393e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6367,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.27.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.0003264312690589577,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6369,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.27.proj.weight": {
+   "add": 0.0,
+   "mse": 8.733013964956626e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6433,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.28.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009802207350730896,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.28.altup_router.weight": {
+   "add": 0.0,
+   "mse": 0.00029592859209515154,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 298,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.28.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0009579656179994345,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.28.attn_k.weight": {
+   "add": 0.0,
+   "mse": 0.00047268971684388816,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3997,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.28.attn_output.weight": {
+   "add": 0.0,
+   "mse": 7.524733973696129e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6508,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.28.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.1260525752732065e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6470,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.28.attn_v.weight": {
+   "add": 0.0,
+   "mse": 0.00047035684110596776,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1683,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.28.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 3.217827497792314e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6556,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.28.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 2.130326902261004e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6547,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.28.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 2.1561854737228714e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6550,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.28.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 2.9407157853711396e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6587,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.28.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 2.1843070499016903e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6525,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.28.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.00036225360236130655,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6527,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.28.proj.weight": {
+   "add": 0.0,
+   "mse": 0.0001678701228229329,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6591,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.29.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009776147780939937,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.29.altup_router.weight": {
+   "add": 0.0,
+   "mse": 0.0001171274489024654,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 295,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.29.attn_k.weight": {
+   "add": 0.0,
+   "mse": 0.0004734251124318689,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3997,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.29.attn_output.weight": {
+   "add": 0.0,
+   "mse": 7.186424682004144e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6666,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.29.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.4659887710877229e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6628,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.29.attn_v.weight": {
+   "add": 0.0,
+   "mse": 0.0004745355690829456,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 4403,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.29.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.9602822451124666e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6714,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.29.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.9992614397779107e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6705,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.29.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 2.0173143639112823e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6708,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.29.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 1.916101246024482e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6745,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.29.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 2.058998325082939e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6683,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.29.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.00047123650438152254,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6685,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.29.proj.weight": {
+   "add": 0.0,
+   "mse": 0.00013074745947960764,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6749,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.3.altup_router.weight": {
+   "add": 0.0,
+   "mse": 2.2155800252221525e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 373,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.3.attn_k.weight": {
+   "add": 0.0,
+   "mse": 1.0658058272383641e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1683,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.3.attn_output.weight": {
+   "add": 0.0,
+   "mse": 3.828946773865027e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1757,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.3.attn_q.weight": {
+   "add": 0.0,
+   "mse": 7.748768439341802e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1674,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.3.attn_v.weight": {
+   "add": 0.0,
+   "mse": 7.684752745262813e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1692,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.3.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.701130597415613e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1815,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.3.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.680478271737229e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1796,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.3.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.5389667169074528e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1799,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.3.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 6.205566478456603e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1846,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.3.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 9.061095624929294e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1774,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.3.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.00014740490587428212,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1776,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.3.proj.weight": {
+   "add": 0.0,
+   "mse": 4.768632061313838e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1850,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.4.altup_router.weight": {
+   "add": 0.0,
+   "mse": 3.692940663313493e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 370,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.4.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0009660579380579293,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.4.attn_k.weight": {
+   "add": 0.0,
+   "mse": 1.4738894606125541e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1896,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.4.attn_output.weight": {
+   "add": 0.0,
+   "mse": 5.06030391989043e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1981,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.4.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.0896409548877273e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1887,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.4.attn_v.weight": {
+   "add": 0.0,
+   "mse": 1.5432777217938565e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1905,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.4.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.246655185444979e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2039,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.4.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.821673140511848e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2020,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.4.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.627550409466494e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2023,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.4.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 6.225132437975844e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2070,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.4.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 1.1012893992301542e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 1998,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.4.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.00029525996069423854,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2000,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.4.proj.weight": {
+   "add": 0.0,
+   "mse": 5.374252941692248e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2074,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.5.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009239346254616976,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 543,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.5.altup_router.weight": {
+   "add": 0.0,
+   "mse": 1.9796927517745644e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 367,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.5.attn_k.weight": {
+   "add": 0.0,
+   "mse": 8.693938980286475e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2120,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.5.attn_output.weight": {
+   "add": 0.0,
+   "mse": 1.627647907298524e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2194,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.5.attn_q.weight": {
+   "add": 0.0,
+   "mse": 7.128509878384648e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2111,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.5.attn_v.weight": {
+   "add": 0.0,
+   "mse": 8.40399388835067e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2129,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.5.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.103132828779053e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2252,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.5.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.909931597765535e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2233,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.5.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.5501693269470707e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2236,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.5.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 6.021360604790971e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2283,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.5.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 7.315902621485293e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2211,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.5.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.00014777119213249534,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2213,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.5.proj.weight": {
+   "add": 0.0,
+   "mse": 4.596747749019414e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2287,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.6.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.000859862077049911,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.6.altup_router.weight": {
+   "add": 0.0,
+   "mse": 3.127578747808002e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 364,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.6.attn_k.weight": {
+   "add": 0.0,
+   "mse": 2.025839057751e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2333,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.6.attn_output.weight": {
+   "add": 0.0,
+   "mse": 3.59374985237082e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2407,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.6.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.3897335520596243e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2324,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.6.attn_v.weight": {
+   "add": 0.0,
+   "mse": 2.1150215616216883e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2342,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.6.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 1.876211172202602e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2465,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.6.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.595785033714492e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2446,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.6.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.4951163393561728e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2449,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.6.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 6.337021204672055e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2496,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.6.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 1.848893953138031e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2424,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.6.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.00036938238190487027,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2426,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.6.proj.weight": {
+   "add": 0.0,
+   "mse": 6.258235953282565e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2500,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.7.altup_router.weight": {
+   "add": 0.0,
+   "mse": 5.2842449804302305e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 361,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.7.attn_k.weight": {
+   "add": 0.0,
+   "mse": 4.611111307895044e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2546,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.7.attn_output.weight": {
+   "add": 0.0,
+   "mse": 6.8316094257170334e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2620,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.7.attn_q.weight": {
+   "add": 0.0,
+   "mse": 4.718424861493986e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2537,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.7.attn_v.weight": {
+   "add": 0.0,
+   "mse": 4.09570793635794e-06,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2555,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.7.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.274643975397339e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2678,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.7.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.2851425708504394e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2659,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.7.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.3104252502671443e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2662,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.7.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 7.460645065293647e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2709,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.7.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 8.998453267849982e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2637,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.7.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 9.845889871940017e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2639,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.7.proj.weight": {
+   "add": 0.0,
+   "mse": 6.099266465753317e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2713,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.8.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0008442574762739241,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.8.altup_router.weight": {
+   "add": 0.0,
+   "mse": 2.964937812066637e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 358,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.8.altup_router_norm.weight": {
+   "add": 0.0,
+   "mse": 0.0009578469325788319,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 543,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.8.attn_k.weight": {
+   "add": 0.0,
+   "mse": 2.461863732605707e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2759,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.8.attn_output.weight": {
+   "add": 0.0,
+   "mse": 5.770442840002943e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2833,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.8.attn_q.weight": {
+   "add": 0.0,
+   "mse": 1.5026533219497651e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2750,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.8.attn_v.weight": {
+   "add": 0.0,
+   "mse": 2.537459113227669e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2768,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.8.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.0519833014986943e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2891,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.8.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.3933405170973856e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2872,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.8.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.344984775641933e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2875,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.8.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 7.15971600584453e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2922,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.8.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 1.0989211659762077e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2850,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.8.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 0.0001675148232607171,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2852,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.8.proj.weight": {
+   "add": 0.0,
+   "mse": 8.411937596974894e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2926,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.9.altup_correct_scale.weight": {
+   "add": 0.0,
+   "mse": 0.0009729783050715923,
+   "src": [
+    {
+     "nbytes": 8192,
+     "sg": 0,
+     "shape": [
+      1,
+      1,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 487,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.9.altup_router.weight": {
+   "add": 0.0,
+   "mse": 2.4695174943190068e-05,
+   "src": [
+    {
+     "nbytes": 32768,
+     "sg": 0,
+     "shape": [
+      4,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 355,
+     "transpose": false,
+     "type": 0
+    }
+   ]
+  },
+  "blk.9.attn_k.weight": {
+   "add": 0.0,
+   "mse": 4.127717693336308e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2972,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.9.attn_output.weight": {
+   "add": 0.0,
+   "mse": 6.049925104889553e-06,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3046,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.9.attn_q.weight": {
+   "add": 0.0,
+   "mse": 2.1064561224193312e-05,
+   "src": [
+    {
+     "nbytes": 4194304,
+     "sg": 0,
+     "shape": [
+      2048,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2963,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.9.attn_v.weight": {
+   "add": 0.0,
+   "mse": 3.4252352634212e-05,
+   "src": [
+    {
+     "nbytes": 1048576,
+     "sg": 0,
+     "shape": [
+      512,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 2981,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.9.ffn_down.weight": {
+   "add": 0.0,
+   "mse": 2.1140351691428805e-06,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      2048,
+      8192
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3104,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.9.ffn_gate.weight": {
+   "add": 0.0,
+   "mse": 1.550816341477912e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3085,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.9.ffn_up.weight": {
+   "add": 0.0,
+   "mse": 1.484007134422427e-05,
+   "src": [
+    {
+     "nbytes": 8388608,
+     "sg": 0,
+     "shape": [
+      8192,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3088,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  },
+  "blk.9.inp_gate.weight": {
+   "add": 0.0,
+   "mse": 6.745357950421749e-06,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      256,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3135,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.9.laurel_l.weight": {
+   "add": 0.0,
+   "mse": 4.5563720050267875e-06,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      64,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3063,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.9.laurel_r.weight": {
+   "add": 0.0,
+   "mse": 8.785640238784254e-05,
+   "src": [
+    {
+     "nbytes": 131072,
+     "sg": 0,
+     "shape": [
+      2048,
+      64
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3065,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "blk.9.proj.weight": {
+   "add": 0.0,
+   "mse": 4.824552161153406e-05,
+   "src": [
+    {
+     "nbytes": 524288,
+     "sg": 0,
+     "shape": [
+      2048,
+      256
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 3139,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "per_layer_model_proj.weight": {
+   "add": 0.0,
+   "mse": 0.0004992330796085298,
+   "src": [
+    {
+     "nbytes": 15728640,
+     "sg": 0,
+     "shape": [
+      7680,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 909,
+     "transpose": false,
+     "type": 9
+    }
+   ]
+  },
+  "token_embd.weight": {
+   "add": 0.0,
+   "mse": 9.004017192637548e-05,
+   "src": [
+    {
+     "nbytes": 268435456,
+     "sg": 0,
+     "shape": [
+      262144,
+      2048
+     ],
+     "stem": "TF_LITE_PREFILL_DECODE",
+     "ti": 6802,
+     "transpose": false,
+     "type": 17
+    }
+   ]
+  }
+ }
+}

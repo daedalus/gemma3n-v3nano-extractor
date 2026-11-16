@@ -66,6 +66,7 @@ import shutil
 import struct
 import sys
 import time
+from types import SimpleNamespace
 
 import numpy as np
 import gguf
@@ -664,7 +665,97 @@ def calibrate_map(reader, inv, nsamp, max_mse):
                 max_mse=max_mse, tensors=tensors, missing=missing)
 
 
-def load_map_plan(map_path, paths, layout):
+
+def generate_complete_json(official_path, map_path, output_json,
+                           fallback_bin_path=None):
+    """Generate complete tensor map JSON + separate fallback binary.
+
+    Reads the existing tensor map (v3nano sources + missing MSEs), opens the
+    official GGUF (mmap only), and writes:
+      * output_json              metadata-only JSON: tensors + missing_with_data
+                                 refs (offset/size/ttype/shape) + fallback_bin
+      * <output_json>_fallback.bin  raw F32 bytes for tensors missing from bundle
+
+    Consumable by --map in standalone mode without needing the official GGUF
+    at extraction time.
+    """
+    log(f"generate-json: loading tensor map {map_path}")
+    with open(map_path) as f:
+        existing_map = json.load(f)
+    tensors = existing_map.get("tensors", {})
+    missing = existing_map.get("missing", {})
+    log(f"generate-json: {len(tensors)} v3nano-matched, {len(missing)} missing")
+
+    log(f"generate-json: opening official GGUF {official_path}")
+    reader = GGUFReader(official_path)
+    official_tensors = {t.name: t for t in reader.tensors}
+    log(f"generate-json: {len(official_tensors)} official tensors")
+
+    if fallback_bin_path is None:
+        fallback_bin_path = output_json.replace(".json", "_fallback.bin")
+
+    complete_map = {
+        "version": 3,
+        "format": MAP_FORMAT,
+        "chromium_model_version": CHROMIUM_MODEL_VERSION,
+        "max_mse": existing_map.get("max_mse", 1e-3),
+        "tensors": tensors,
+        "fallback_bin": os.path.basename(fallback_bin_path),
+        "missing_with_data": {},
+    }
+
+    offset = 0
+    total_bytes = 0
+    with open(fallback_bin_path, "wb") as bf:
+        for name, mse in missing.items():
+            if name == PER_LAYER_NAME:
+                complete_map["missing_with_data"][name] = {
+                    "status": "special",
+                    "type": "assembled",
+                    "info": "per_layer assembled from TF_LITE_PER_LAYER_EMBEDDER.bin",
+                }
+                continue
+            ot = official_tensors.get(name)
+            if ot is None:
+                log(f"generate-json: WARNING {name} not found in official GGUF")
+                continue
+            raw = ot.data.reshape(-1)
+            raw_bytes = raw.tobytes() if hasattr(raw, "tobytes") else bytes(raw)
+            bf.write(raw_bytes)
+            complete_map["missing_with_data"][name] = {
+                "status": "official_fallback",
+                "mse": float(mse) if isinstance(mse, (int, float)) else mse,
+                "ttype": int(ot.tensor_type),
+                "shape": [int(d) for d in ot.shape],
+                "nelem": int(raw.size),
+                "offset": offset,
+                "size": len(raw_bytes),
+            }
+            offset += len(raw_bytes)
+            total_bytes += len(raw_bytes)
+
+    log(f"generate-json: fallback raw bytes {total_bytes:,} "
+        f"({total_bytes/1e6:.1f} MB) -> {fallback_bin_path}")
+
+    def _default(o):
+        if isinstance(o, (str, bool, int, float)):
+            return o
+        if isinstance(o, (np.integer,)):
+            return int(o)
+        if isinstance(o, (np.floating,)):
+            return float(o)
+        if isinstance(o, np.ndarray):
+            return o.tolist()
+        raise TypeError(f"{o.__class__.__name__} not serializable")
+
+    with open(output_json, "w") as f:
+        json.dump(complete_map, f, indent=1, sort_keys=True, default=_default)
+    size = os.path.getsize(output_json)
+    log(f"generate-json: wrote {output_json} ({size:,} bytes, ~{size/1e6:.1f} MB)")
+    return 0
+
+
+def load_map_plan(map_path, paths, layout, fallback_bin_override=None):
     """Build plan from a tensor map: v3nano sources for every tensor."""
     if not os.path.exists(map_path):
         sys.exit(f"ERROR: tensor map not found: {map_path}\n"
@@ -675,6 +766,15 @@ def load_map_plan(map_path, paths, layout):
     if tmap.get("format") != MAP_FORMAT:
         sys.exit(f"ERROR: {map_path}: unsupported map format {tmap.get('format')}")
     entries = tmap["tensors"]
+    mdata = tmap.get("missing_with_data", {}) or {}
+    fallback_bin = None
+    if tmap.get("fallback_bin"):
+        fallback_bin = os.path.join(os.path.dirname(os.path.abspath(map_path)),
+                                    tmap["fallback_bin"])
+        if not os.path.exists(fallback_bin):
+            sys.exit(f"ERROR: fallback binary not found: {fallback_bin}")
+    if fallback_bin_override is not None:
+        fallback_bin = fallback_bin_override
     plan, missing = {}, []
     for t in layout:
         name = t["name"]
@@ -689,6 +789,22 @@ def load_map_plan(map_path, paths, layout):
                 # gemma3n reuses K/V of an earlier layer here; llama.cpp never
                 # reads these weights, the mobile conversion drops them.
                 plan[name] = ("zero", "KV-shared layer, unused")
+                continue
+            md = mdata.get(name)
+            if isinstance(md, dict) and "offset" in md and "size" in md and "ttype" in md:
+                offset = md.get("offset", 0)
+                size = md.get("size", 0)
+                ttype = md.get("ttype", 0)
+                if not fallback_bin or not os.path.exists(fallback_bin):
+                    sys.exit(f"ERROR: no fallback_bin for {name}")
+                with open(fallback_bin, "rb") as bf:
+                    bf.seek(offset)
+                    raw = bf.read(size)
+                if ttype in (0, 1):
+                    arr = np.frombuffer(raw, dtype=np.float32 if ttype == 0 else np.float16)
+                else:
+                    arr = np.frombuffer(raw, dtype=np.uint8)
+                plan[name] = ("json", arr, ttype)
                 continue
             missing.append(name)
             continue
@@ -715,7 +831,8 @@ def load_map_plan(map_path, paths, layout):
                  f"{map_path}: {', '.join(missing[:12])}"
                  f"{' ...' if len(missing) > 12 else ''}")
     log(f"map {map_path}: {sum(1 for p in plan.values() if p[0] == 'tflite')} "
-        f"v3nano, {sum(1 for p in plan.values() if p[0] == 'zero')} zero-filled, "
+        f"v3nano, {sum(1 for p in plan.values() if p[0] == 'json')} json fallback, "
+        f"{sum(1 for p in plan.values() if p[0] == 'zero')} zero-filled, "
         f"1 per-layer assembly")
     return plan
 
@@ -962,6 +1079,22 @@ def build_gguf(out_path, kv_writer, nk, layout, plan, paths, kv_size_hint):
             elif kind == "zero":
                 write_zeros(fout, nelements(t["ne"]), out_dtype)
                 log(f"build [{j:3d}] {name}: zero-filled ({step[1]})")
+            elif kind == "json":
+                arr, ttype = step[1], step[2]
+                nelem = arr.size
+                if ttype in (0, 1):
+                    fout.write(arr.astype(out_dtype).tobytes())
+                else:
+                    bsz, bbytes = GGML_QUANT_SIZES[ttype]
+                    sub = 1 << 18
+                    for s in range(0, nelem, sub):
+                        e = min(s + sub, nelem)
+                        blk0, blk1 = s // bsz, (e + bsz - 1) // bsz
+                        block = np.ascontiguousarray(arr[blk0 * bbytes:blk1 * bbytes])
+                        vals = gguf.quants.dequantize(
+                            block, gguf.GGMLQuantizationType(ttype)).astype(np.float32)
+                        fout.write(vals[:e - s].astype(out_dtype).tobytes())
+                log(f"build [{j:3d}] {name}: json fallback (ttype={ttype})")
             elif kind == "tflite":
                 srcs, add = step[1], step[2]
                 write_sources(fout, srcs, t["ne"], out_dtype, add)
@@ -1123,12 +1256,33 @@ def parse_args():
     ap.add_argument("--samples", type=int, default=20000, help="samples per tensor")
     ap.add_argument("--no-verify", action="store_true", help="skip verification")
     ap.add_argument("--save-matches", default="", help="write match decisions JSON here")
+    ap.add_argument("--generate-json", action="store_true",
+                    help="generate complete JSON + fallback binary from an "
+                         "official GGUF and existing tensor map (replaces "
+                         "generate_complete_json.py)")
+    ap.add_argument("--fallback-bin", default="",
+                    help="path to the fallback binary file (overrides "
+                         "fallback_bin field in the JSON map)")
     ap.add_argument("--quantized-by", default="",
                     help="set general.quantized_by in the output GGUF "
                          "(e.g. 'daedalus'). Empty = keep/omit.")
     ap.add_argument("--repo-url", default="",
                     help="set general.repo_url in the output GGUF. Empty = keep/omit.")
     return ap.parse_args()
+
+
+def main_generate_json(args, paths):
+    """Generate complete JSON + fallback binary from an official GGUF and existing map."""
+    if not args.official:
+        sys.exit("ERROR: --generate-json needs --official (the reference GGUF)")
+    if not os.path.exists(args.official):
+        sys.exit(f"ERROR: official GGUF not found: {args.official}")
+    if not os.path.exists(args.map):
+        sys.exit(f"ERROR: tensor map not found: {args.map}")
+    if args.out is None:
+        args.out = os.path.join(os.path.dirname(args.map), "official_map.json")
+    return generate_complete_json(args.official, args.map, args.out,
+                                   args.fallback_bin or None)
 
 
 def main():
@@ -1149,6 +1303,8 @@ def main():
 
     if args.write_map and not args.official:
         sys.exit("ERROR: --write-map needs --official (the reference it calibrates against)")
+    if args.generate_json:
+        return main_generate_json(args, paths)
     if args.out is None and not args.write_map:
         args.out = DEFAULT_OUT
     if args.official:
@@ -1165,7 +1321,7 @@ def main_standalone(args, paths):
     kv_bytes = spec.encode_kv(entries)
     log(f"standalone: {len(layout)} tensors, {len(entries)} KV entries "
         f"({len(kv_bytes):,} bytes, tokenizer {tok_path})")
-    plan = load_map_plan(args.map, paths, layout)
+    plan = load_map_plan(args.map, paths, layout, args.fallback_bin or None)
 
     log(f"stage 3: building {args.out}")
     counts = build_gguf(args.out, lambda f: f.write(kv_bytes), len(entries),
