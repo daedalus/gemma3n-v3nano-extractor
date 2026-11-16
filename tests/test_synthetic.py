@@ -188,6 +188,18 @@ def run(argv):
 
 common = ['--decode', 'never', '--decoded-dir', dec, '--flatbuf-dir', dec]
 mp = os.path.join(W, 'map.json')
+# --write-map without --out: map only, no GGUF anywhere
+mp_only = os.path.join(W, 'map_only.json')
+cwd = os.getcwd()
+os.chdir(W)
+try:
+    rc0 = run(common + ['--official', off_path, '--write-map', mp_only])
+finally:
+    os.chdir(cwd)
+assert rc0 == 0 and os.path.exists(mp_only), rc0
+stray = [os.path.join(d, f) for d, _, fs in os.walk(W) for f in fs if f.endswith('.gguf')
+         and f != 'official.gguf']
+assert not stray, f'map-only run produced a GGUF: {stray}'
 rc1 = run(common + ['--official', off_path, '--write-map', mp, '--out', os.path.join(W, 'legacy.gguf')])
 rc2 = run(common + ['--map', mp, '--out', os.path.join(W, 'standalone.gguf')])
 print('rc legacy', rc1, 'rc standalone', rc2)
