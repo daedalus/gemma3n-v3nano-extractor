@@ -135,6 +135,57 @@ def _skip_kv_value(b, p, t):
     return p + _KV_SIZES[t]
 
 
+def _copy_kv_with_overrides(fin, kv_end, fout, overrides):
+    """Copy the KV section from fin (starting at byte 24) to fout.
+
+    For any key present in `overrides` (a dict of key -> new string value),
+    the string value is replaced. All other records are copied byte-for-byte.
+    """
+    pos = 24
+    while pos < kv_end:
+        fin.seek(pos)
+        kl = struct.unpack("<Q", fin.read(8))[0]
+        key = fin.read(kl).decode("utf-8")
+        vtype = struct.unpack("<I", fin.read(4))[0]
+        # Compute the end of this record to know how many raw bytes to copy
+        # when we are not overriding.
+        p = pos + 8 + kl + 4
+        p = _skip_kv_value_stream(fin, p, vtype)
+        rec_end = p
+        if key in overrides and vtype == 8:  # string
+            new_val = overrides[key].encode("utf-8")
+            fout.write(struct.pack("<Q", kl))
+            fout.write(key.encode("utf-8"))
+            fout.write(struct.pack("<I", vtype))
+            fout.write(struct.pack("<Q", len(new_val)))
+            fout.write(new_val)
+        else:
+            fin.seek(pos)
+            remaining = rec_end - pos
+            while remaining > 0:
+                chunk = fin.read(min(1 << 20, remaining))
+                fout.write(chunk)
+                remaining -= len(chunk)
+        pos = rec_end
+
+
+def _skip_kv_value_stream(fin, p, t):
+    """Return the byte offset just past the KV value starting at p (in fin)."""
+    if t == 8:  # string
+        fin.seek(p)
+        n = struct.unpack("<Q", fin.read(8))[0]
+        return p + 8 + n
+    if t == 9:  # array
+        fin.seek(p)
+        at = struct.unpack("<I", fin.read(4))[0]
+        al = struct.unpack("<Q", fin.read(8))[0]
+        p += 12
+        for _ in range(al):
+            p = _skip_kv_value_stream(fin, p, at)
+        return p
+    return p + _KV_SIZES[t]
+
+
 def parse_gguf_header(fn):
     """Parse a GGUF header without touching tensor data.
 
@@ -662,7 +713,7 @@ def output_size_estimate(header):
     return n
 
 
-def build_gguf(out_path, header, official_tensors, decisions, paths, threshold):
+def build_gguf(out_path, header, official_tensors, decisions, paths, threshold, kv_overrides=None):
     nt, nk = header["nt"], header["nk"]
     tensors = header["tensors"]
     official_path = header["source"]
@@ -682,15 +733,19 @@ def build_gguf(out_path, header, official_tensors, decisions, paths, threshold):
         fout.write(struct.pack("<I", 3))          # GGUF v3 (llama.cpp gemma3n)
         fout.write(struct.pack("<Q", nt))
         fout.write(struct.pack("<Q", nk))
-        # KV section verbatim: the official file already carries llama.cpp's
-        # gemma3n metadata (arch, hparams, tokenizer, ...).
+        # KV section: verbatim from the official file (llama.cpp gemma3n
+        # metadata: arch, hparams, tokenizer, ...), with optional overrides
+        # applied via _copy_kv_with_overrides.
         with open(official_path, "rb") as fin:
-            fin.seek(24)
-            remaining = header["kv_end"] - 24
-            while remaining > 0:
-                chunk = fin.read(min(1 << 20, remaining))
-                fout.write(chunk)
-                remaining -= len(chunk)
+            if kv_overrides:
+                _copy_kv_with_overrides(fin, header["kv_end"], fout, kv_overrides)
+            else:
+                fin.seek(24)
+                remaining = header["kv_end"] - 24
+                while remaining > 0:
+                    chunk = fin.read(min(1 << 20, remaining))
+                    fout.write(chunk)
+                    remaining -= len(chunk)
         # Tensor infos (order and shapes identical to official).
         patch_pos = []
         for t in tensors:
@@ -828,6 +883,12 @@ def parse_args():
     ap.add_argument("--samples", type=int, default=20000, help="samples per tensor")
     ap.add_argument("--no-verify", action="store_true", help="skip verification")
     ap.add_argument("--save-matches", default="", help="write match decisions JSON here")
+    ap.add_argument("--quantized-by", default="",
+                    help="override general.quantized_by in the output GGUF "
+                         "(e.g. 'daedalus'). Empty = keep official value.")
+    ap.add_argument("--repo-url", default="",
+                    help="override general.repo_url in the output GGUF. Empty = keep "
+                         "official value.")
     return ap.parse_args()
 
 
@@ -880,9 +941,17 @@ def main():
         log(f"match decisions saved to {args.save_matches}")
 
     # [3] build
+    kv_overrides = {}
+    if args.quantized_by:
+        kv_overrides["general.quantized_by"] = args.quantized_by
+    if args.repo_url:
+        kv_overrides["general.repo_url"] = args.repo_url
     log(f"stage 3: building {args.out}")
+    if kv_overrides:
+        log(f"kv overrides: {kv_overrides}")
     n_matched, n_fallback, n_special = build_gguf(
-        args.out, header, official_tensors, decisions, paths, args.threshold)
+        args.out, header, official_tensors, decisions, paths, args.threshold,
+        kv_overrides=kv_overrides or None)
     close_handles()
 
     # [4] verify
