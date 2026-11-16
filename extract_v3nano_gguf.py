@@ -1114,7 +1114,10 @@ def parse_args():
     ap.add_argument("--tokenizer", default="",
                     help="SentencePiece model (default: TOKENIZER_MODEL from the "
                          "decoded bundle)")
-    ap.add_argument("--out", default=DEFAULT_OUT, help="output unquantized GGUF")
+    ap.add_argument("--out", default=None,
+                    help=f"output unquantized GGUF (default: {DEFAULT_OUT}; with "
+                         f"--write-map and no --out, only the map is written and "
+                         f"no GGUF is built)")
     ap.add_argument("--threshold", type=float, default=5e-5,
                     help="max sampled MSE to trust a v3nano match (else fallback)")
     ap.add_argument("--samples", type=int, default=20000, help="samples per tensor")
@@ -1146,6 +1149,8 @@ def main():
 
     if args.write_map and not args.official:
         sys.exit("ERROR: --write-map needs --official (the reference it calibrates against)")
+    if args.out is None and not args.write_map:
+        args.out = DEFAULT_OUT
     if args.official:
         return main_official(args, paths)
     return main_standalone(args, paths)
@@ -1202,6 +1207,10 @@ def main_official(args, paths):
         with open(args.write_map, "w") as f:
             json.dump(tmap, f, indent=1, sort_keys=True)
         log(f"tensor map written to {args.write_map}")
+        if args.out is None:
+            close_handles()
+            log("no --out given: map only, skipping the GGUF build")
+            return 0
 
     # [2] match
     log(f"stage 2: matching (threshold {args.threshold:g}, {args.samples} samples/tensor)")

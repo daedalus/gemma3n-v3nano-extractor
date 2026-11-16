@@ -73,8 +73,10 @@ it, run once with any unquantized or quantized official E2B GGUF:
 
 ```bash
 python3 extract_v3nano_gguf.py --official work/bin/gemma-3n-E2B-it-f16.gguf \
-    --write-map v3nano_tensor_map.json --out build.gguf
+    --write-map v3nano_tensor_map.json
 ```
+
+This only writes the map; add `--out PATH` to also run the reference build.
 
 For every official tensor this searches the flatbuffers for the best-matching
 tensor. The search covers F32/F16/INT32/UINT8/INT8/INT4 storage, direct and
