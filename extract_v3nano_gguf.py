@@ -720,7 +720,9 @@ def generate_complete_json(official_path, map_path, output_json,
                 log(f"generate-json: WARNING {name} not found in official GGUF")
                 continue
             raw = ot.data.reshape(-1)
-            raw_bytes = raw.tobytes() if hasattr(raw, "tobytes") else bytes(raw)
+            raw_u32 = np.frombuffer(raw.tobytes(), dtype=np.float32).view(np.uint32)
+            high_16 = (raw_u32 >> 16).astype(np.uint16)
+            raw_bytes = high_16.tobytes()
             bf.write(raw_bytes)
             complete_map["missing_with_data"][name] = {
                 "status": "official_fallback",
@@ -801,7 +803,10 @@ def load_map_plan(map_path, paths, layout, fallback_bin_override=None):
                     bf.seek(offset)
                     raw = bf.read(size)
                 if ttype in (0, 1):
-                    arr = np.frombuffer(raw, dtype=np.float32 if ttype == 0 else np.float16)
+                    # Fallback stored as high-16-bits of float32 (bfloat16),
+                    # all low-16-bits were zero, so reconstruct losslessly.
+                    high_u16 = np.frombuffer(raw, dtype=np.uint16)
+                    arr = (high_u16.astype(np.uint32) << 16).view(np.float32)
                 else:
                     arr = np.frombuffer(raw, dtype=np.uint8)
                 plan[name] = ("json", arr, ttype)
