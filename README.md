@@ -4,10 +4,22 @@ Turn the Gemma-3n (E2B, "v3nano") on-device model that ships inside Chromium
 into a single **unquantized GGUF** that `llama.cpp` can load and run.
 
 Chromium stores the model as a set of LiteRT/TFLite flatbuffers with
-**unnamed weight tensors**, so there is nothing to map by name. This tool
-matches every tensor of an official `gemma-3n-E2B` GGUF to a TFLite tensor by
-shape and sampled dequantized-value MSE, then writes a llama.cpp-compatible
-GGUF in one streaming pass.
+**unnamed weight tensors**, so there is nothing to map by name. The extractor
+builds a llama.cpp-compatible GGUF from the Chromium bundle **alone**, in one
+streaming pass:
+
+- **metadata**: `gemma3n_spec.py` holds the llama.cpp `gemma3n` hyperparameters,
+  the chat template and the 727-tensor layout. The tokenizer is rebuilt from the
+  bundle's own SentencePiece `TOKENIZER_MODEL`, with the rules llama.cpp's
+  converter applies. The result is byte-identical to the published E2B GGUFs.
+- **weights**: `v3nano_tensor_map.json` says which flatbuffer tensor each GGUF
+  tensor lives in and how it is laid out. It holds coordinates only, no
+  weights.
+
+An official `gemma-3n-E2B` GGUF is only needed once, to *calibrate* that map
+(`--official … --write-map`). The original reference pipeline (match by
+sampled MSE, fall back to official values) is still available with
+`--official`.
 
 Validated in practice: all 727 tensors land within 1e-3 MSE of the official
 model, and the result answers correctly ("…George Washington…", atomic symbol
@@ -40,17 +52,44 @@ quantize the result (`llama-quantize`, `llama-cli`).
 | XOR keystream (1 MiB) | `work/bin/keystream_1mb.bin` | Decrypts each section's header |
 | `encrypt_lengths.json` | `work/json/encrypt_lengths.json` | Per-section encrypted header length `H` |
 | Decoded flatbuffers | `work/bin/dec/TF_LITE_*.bin` | Written by stage 0, reused on later runs |
-| Official reference GGUF | `work/bin/gemma-3n-E2B-it-Q4_K_S.gguf` | KV metadata, tensor layout/types, fallback weights |
+| Tensor map | `v3nano_tensor_map.json` (repo) | GGUF name → flatbuffer tensor, orientation, slices |
+| Official GGUF (optional) | `--official PATH` | Only for `--write-map` calibration or the reference pipeline |
 
 Every path is overridable — see `--help`.
 
 ## Quick start
 
 ```bash
-python3 extract_v3nano_gguf.py                     # decode + match + build + verify
+python3 extract_v3nano_gguf.py                     # decode + build + self-check, no official GGUF
 python3 extract_v3nano_gguf.py --decode always     # force re-decryption of weights.bin
-python3 extract_v3nano_gguf.py --no-verify         # skip the 4th stage
-python3 extract_v3nano_gguf.py --out build.gguf --save-matches matches.json
+python3 extract_v3nano_gguf.py --no-verify         # skip the self-check
+```
+
+### One-time map calibration
+
+`v3nano_tensor_map.json` is tied to the Chromium model version (`2025.8.21.1028`,
+the same version the section table in the script is for). To create or refresh
+it, run once with any unquantized or quantized official E2B GGUF:
+
+```bash
+python3 extract_v3nano_gguf.py --official work/bin/gemma-3n-E2B-it-f16.gguf \
+    --write-map v3nano_tensor_map.json --out build.gguf
+```
+
+For every official tensor this searches the flatbuffers for the best-matching
+tensor. The search covers F32/F16/INT32/UINT8/INT8/INT4 storage, direct and
+transposed layouts (both for square matrices), whole or per-slice 3D tensors,
+and norms stored as `1 + w`. It records the match when the sampled MSE is
+under `--map-max-mse` (default `1e-3`); anything not located is listed under
+`"missing"`. The standalone build stops with an error if any tensor has no
+source, except the K/V weights of the 10 KV-shared layers. llama.cpp never
+reads those weights, so they are zero-filled.
+
+### Reference pipeline
+
+```bash
+python3 extract_v3nano_gguf.py --official work/bin/gemma-3n-E2B-it-Q4_K_S.gguf \
+    --out build.gguf --save-matches matches.json   # match + fallback + verify
 ```
 
 Then, if you want a small runtime file:
@@ -65,17 +104,19 @@ llama-quantize build.gguf gemma-3n-E2B-v3nano-Q4_K_S.gguf Q4_K_S
 |---|---|
 | **0 · decode** | Split Chromium `weights.bin` into its sections (ZIP-like layout); each section's first `H` bytes are XORed with the global keystream, the remainder is stored in the clear. Outputs `TF_LITE_*.bin` + `METADATA.bin`. |
 | **1 · inventory** | mmap all flatbuffers, index every tensor (type, shape, buffer, quantization). Identical copies appearing in several subgraphs are collapsed by md5 over raw bytes + scales + zero-points. |
-| **2 · match** | For each official tensor, sample 20k element positions and take the candidate with the lowest MSE. Orientation is handled: `cand.shape == ne[::-1]` is a direct copy, `cand.shape == ne` is a transposed gather. A match is accepted only below `--threshold` (default `5e-5`). |
-| **3 · build** | Stream-write GGUF v3: the official KV section verbatim (llama.cpp `gemma3n` metadata), 727 tensor infos (F32/F16 per official tensor type), then data — from the v3nano match, from official GGUF dequantization as fallback, or the special `per_layer_token_embd` assembly (30 int4 slices row-interleaved into `ne=[7680,262144]`). |
-| **4 · verify** | Sample every tensor of the new file against the official GGUF; exit non-zero if anything exceeds 1e-3 MSE. |
+| **2 · match** *(reference only)* | For each official tensor, sample 20k element positions and take the candidate with the lowest MSE. Orientation is handled: `cand.shape == ne[::-1]` is a direct copy, `cand.shape == ne` is a transposed gather. A match is accepted only below `--threshold` (default `5e-5`). |
+| **3 · build** | Stream-write GGUF v3: KV section (standalone: generated from `gemma3n_spec.py` + `TOKENIZER_MODEL`; reference: copied from the official file), 727 tensor infos (F32/F16), then data — from the mapped/matched v3nano tensor, from official GGUF dequantization as fallback (reference only), or the special `per_layer_token_embd` assembly (30 int4 slices row-interleaved into `ne=[7680,262144]`). |
+| **4 · verify** | Standalone: header round-trip, finite values, no unexpected all-zero tensor. Reference: sample every tensor against the official GGUF and exit non-zero if anything exceeds 1e-3 MSE. |
 
-### Why a fallback exists
+### Why the reference pipeline has a fallback
 
-The mobile conversion fuses or folds several tensors — norms, altup
-coefficients, `altup_proj`, `altup_unembd_proj` — so no usable v3nano copy
-exists for them. Since v3nano and E2B share the same weights, those are
-rebuilt from the official model. A typical split is **274 matched / 452
-fallback / 1 assembled** (of 727).
+The strict `5e-5` threshold rejects many v3nano tensors that are the right
+tensor but carry int4/int8 quantization noise. The narrow original search also
+missed tensors stored in other ways (F16 norms, `altup_proj` as 2D slices,
+transposed square matrices). The reference pipeline rebuilds those from the
+official model. A typical split there is **274 matched / 452 fallback / 1
+assembled** (of 727). The tensor map is calibrated without that threshold and
+with the wider search, so the standalone build reads every tensor from v3nano.
 
 ## Behaviour notes
 
@@ -97,10 +138,20 @@ fallback / 1 assembled** (of 727).
 ```
 GGUF v3, 32-byte aligned
 727 tensors (F32 where the official tensor is F32, F16 otherwise)
-KV section copied from the official gemma3n GGUF
+KV section: llama.cpp gemma3n metadata + tokenizer from the bundle
 ```
 
 Quantize it, or load it directly with `llama-cli -m build.gguf -p "..."`.
+
+## Tests
+
+```bash
+python3 tests/test_synthetic.py
+```
+
+Builds a scaled-down gemma3n as synthetic TFLite flatbuffers and an official
+GGUF. It runs the reference pipeline with `--write-map`, then the standalone
+build from that map alone, and checks the two agree.
 
 ## Analyzing a GGUF against a reference
 
