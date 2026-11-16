@@ -1,0 +1,161 @@
+ours      : gemma-3n-E2B-v3nano-F16.gguf
+reference : gemma-3n-E2B-it-Q8_0.gguf
+  file size    : 8,918,846,816 vs 4,788,112,064 bytes
+  kv entries   : 54 vs 45
+  tensors      : 727 vs 727
+  data_offset  : 6558688 vs 6558016
+  types (ours) : {'F16': 365, 'F32': 362}
+  types (ref)  : {'F16': 93, 'F32': 362, 'Q8_0': 272}
+
+KV metadata:
+  only ours: ['general.basename', 'general.finetune', 'general.name', 'general.quantized_by', 'general.repo_url', 'quantize.imatrix.chunks_count', 'quantize.imatrix.dataset', 'quantize.imatrix.entries_count', 'quantize.imatrix.file']
+  only ref : none
+  gemma3n.activation_sparsity_scale: ours=[30 items] [1.6448535919189453, 1.6448535919189453, 1.6448535919189453...  ref=[30 items] [1.6448533535003662, 1.6448533535003662, 1.6448533535003662...
+  gemma3n.feed_forward_length: ours=[30 items] [8192, 8192, 8192, 8192, ...]  ref=8192
+  general.base_model.0.name: ours='Gemma 3n E2B It'  ref='Gemma 3n E4b It'
+  general.base_model.0.repo_url: ours='https://huggingface.co/google/gemma-3n-E2B-it'  ref='https://huggingface.co/google/gemma-3n-E4b-it'
+  general.file_type: ours=14  ref=7
+  general.tags: ours=['automatic-speech-recognition', 'unsloth', 'automatic-speech-translat...  ref=['automatic-speech-recognition', 'automatic-speech-translation', 'audi...
+  tokenizer.ggml.eos_token_id: ours=106  ref=1
+  tokenizer.ggml.token_type: ours=[262144 items] [3, 3, 3, 3, ...]  ref=[262144 items] [3, 3, 3, 3, ...]
+
+Inventory:
+  only ours       : 0 []
+  only ref        : 0 []
+  shape mismatches: 0 []
+  dtype mismatches: 272 {'F16<-Q8_0': 272}
+
+Values (727 tensors, <= 262144 random samples each, seed 0):
+  element-weighted MSE : 7.241e-05
+  mean / median MSE    : 5.514e-06 / 0.000e+00
+  max MSE              : 1.505e-04
+  median / max rel RMSE: 0.000e+00 / 2.492e-01
+  min cosine           : 0.972754
+  bit-exact tensors    : 428 (element-weighted equal fraction 0.020678)
+  provenance           : {'differs': 299, 'exact': 428}
+  non-finite           : ours=0 ref=0 tensors
+  MSE buckets          : {'<1e-12': 428, '<1e-09': 428, '<1e-07': 428, '<1e-05': 555, '<0.001': 727, '<0.1': 727}
+
+Worst 15 tensors by MSE:
+  name                                              n_elem       mse       rel       cos   max_abs  types / prov
+  per_layer_token_embd.weight                   2013265920  1.50e-04  1.94e-01  0.980959  3.13e-01  F16/Q8_0 differs
+  blk.0.laurel_l.weight                             131072  4.88e-05  2.49e-01  0.989113  4.61e-02  F16/F16 differs
+  blk.14.proj.weight                                524288  4.48e-05  1.05e-01  0.994672  2.30e+00  F16/Q8_0 differs
+  blk.24.laurel_r.weight                            131072  4.30e-05  5.41e-02  0.999036  1.30e-01  F16/F16 differs
+  blk.10.altup_router.weight                          8192  4.06e-05  2.39e-01  0.983446  3.28e-02  F16/F16 differs
+  blk.2.altup_router.weight                           8192  3.84e-05  2.31e-01  0.986785  2.95e-02  F16/F16 differs
+  blk.14.attn_k.weight                             1048576  3.78e-05  2.24e-01  0.995253  5.31e-01  F16/Q8_0 differs
+  blk.4.altup_router.weight                           8192  3.77e-05  2.33e-01  0.983086  3.38e-02  F16/F16 differs
+  blk.29.proj.weight                                524288  3.75e-05  9.78e-02  0.995253  2.18e-01  F16/Q8_0 differs
+  blk.12.altup_router.weight                          8192  3.64e-05  2.24e-01  0.989122  4.00e-02  F16/F16 differs
+  blk.12.proj.weight                                524288  3.59e-05  9.34e-02  0.995628  1.93e-01  F16/Q8_0 differs
+  blk.13.laurel_r.weight                            131072  3.54e-05  4.92e-02  0.999431  1.25e-01  F16/F16 differs
+  blk.8.proj.weight                                 524288  3.53e-05  9.38e-02  0.995598  2.32e-01  F16/Q8_0 differs
+  blk.13.proj.weight                                524288  3.50e-05  9.67e-02  0.995324  3.25e-01  F16/Q8_0 differs
+  blk.9.attn_k.weight                              1048576  3.47e-05  2.14e-01  0.997012  3.57e-01  F16/Q8_0 differs
+
+Worst 15 tensors by rel RMSE:
+  name                                              n_elem       mse       rel       cos   max_abs  types / prov
+  blk.0.laurel_l.weight                             131072  4.88e-05  2.49e-01  0.989113  4.61e-02  F16/F16 differs
+  blk.27.attn_q.weight                             4194304  1.97e-05  2.44e-01  0.994213  5.78e-02  F16/Q8_0 differs
+  blk.10.altup_router.weight                          8192  4.06e-05  2.39e-01  0.983446  3.28e-02  F16/F16 differs
+  blk.21.attn_q.weight                             4194304  1.84e-05  2.35e-01  0.995778  4.88e-02  F16/Q8_0 differs
+  blk.25.attn_q.weight                             4194304  1.78e-05  2.33e-01  0.996499  5.21e-02  F16/Q8_0 differs
+  blk.4.altup_router.weight                           8192  3.77e-05  2.33e-01  0.983086  3.38e-02  F16/F16 differs
+  blk.28.inp_gate.weight                            524288  2.76e-05  2.32e-01  0.972754  1.63e+00  F16/Q8_0 differs
+  blk.25.attn_output.weight                        4194304  1.76e-05  2.32e-01  0.998340  7.13e-02  F16/Q8_0 differs
+  blk.2.altup_router.weight                           8192  3.84e-05  2.31e-01  0.986785  2.95e-02  F16/F16 differs
+  blk.9.attn_q.weight                              4194304  1.74e-05  2.29e-01  0.997557  4.13e-02  F16/Q8_0 differs
+  blk.27.attn_output.weight                        4194304  1.69e-05  2.26e-01  0.998107  8.07e-02  F16/Q8_0 differs
+  blk.12.altup_router.weight                          8192  3.64e-05  2.24e-01  0.989122  4.00e-02  F16/F16 differs
+  blk.14.attn_k.weight                             1048576  3.78e-05  2.24e-01  0.995253  5.31e-01  F16/Q8_0 differs
+  blk.12.attn_output.weight                        4194304  1.64e-05  2.23e-01  0.998959  5.69e-02  F16/Q8_0 differs
+  blk.14.attn_q.weight                             4194304  1.67e-05  2.23e-01  0.996024  9.05e-02  F16/Q8_0 differs
+
+Worst 15 tensors by cosine:
+  name                                              n_elem       mse       rel       cos   max_abs  types / prov
+  blk.28.inp_gate.weight                            524288  2.76e-05  2.32e-01  0.972754  1.63e+00  F16/Q8_0 differs
+  blk.28.ffn_down.weight                          16777216  2.68e-06  2.01e-01  0.979817  4.42e-02  F16/Q8_0 differs
+  blk.27.ffn_gate.weight                          16777216  1.91e-05  2.02e-01  0.979830  1.53e-01  F16/Q8_0 differs
+  blk.28.ffn_gate.weight                          16777216  1.94e-05  2.00e-01  0.979844  1.66e-01  F16/Q8_0 differs
+  blk.18.ffn_down.weight                          16777216  2.47e-06  1.98e-01  0.980115  6.06e-02  F16/Q8_0 differs
+  blk.27.ffn_down.weight                          16777216  2.64e-06  1.99e-01  0.980132  5.20e-02  F16/Q8_0 differs
+  blk.29.ffn_gate.weight                          16777216  1.83e-05  1.98e-01  0.980172  1.77e-01  F16/Q8_0 differs
+  per_layer_token_embd.weight                   2013265920  1.50e-04  1.94e-01  0.980959  3.13e-01  F16/Q8_0 differs
+  blk.27.ffn_up.weight                            16777216  1.94e-05  1.97e-01  0.981343  1.64e-01  F16/Q8_0 differs
+  blk.28.ffn_up.weight                            16777216  1.96e-05  1.93e-01  0.981408  1.60e-01  F16/Q8_0 differs
+  blk.26.ffn_gate.weight                          16777216  1.91e-05  1.93e-01  0.981722  1.35e-01  F16/Q8_0 differs
+  blk.23.ffn_gate.weight                          16777216  1.43e-05  1.90e-01  0.981863  1.76e-01  F16/Q8_0 differs
+  blk.26.ffn_down.weight                          16777216  2.46e-06  2.03e-01  0.981966  6.35e-02  F16/Q8_0 differs
+  blk.29.ffn_down.weight                          16777216  2.54e-06  1.91e-01  0.982662  9.41e-02  F16/Q8_0 differs
+  blk.29.ffn_up.weight                            16777216  1.70e-05  1.85e-01  0.982787  1.21e-01  F16/Q8_0 differs
+
+Families (layer-agnostic):
+  family                                      n     w_mse   max_mse   max_rel   min_cos  provenance
+  altup_proj.weight                           1  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 1}
+  altup_unembd_proj.weight                    1  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 1}
+  blk.*.altup_correct_coef.weight            30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.altup_correct_scale.weight           30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.altup_predict_coef.weight            30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.altup_router.weight                  30  1.25e-05  4.06e-05  2.39e-01  0.983086  {'exact': 17, 'differs': 13}
+  blk.*.altup_router_norm.weight             30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.attn_k.weight                        30  8.90e-06  3.78e-05  2.24e-01  0.995253  {'differs': 20, 'exact': 10}
+  blk.*.attn_k_norm.weight                   30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.attn_norm.weight                     30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.attn_output.weight                   30  7.24e-06  1.76e-05  2.32e-01  0.997294  {'differs': 30}
+  blk.*.attn_q.weight                        30  8.60e-06  1.97e-05  2.44e-01  0.994213  {'differs': 30}
+  blk.*.attn_q_norm.weight                   30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.attn_v.weight                        30  8.31e-06  3.27e-05  2.06e-01  0.998715  {'exact': 10, 'differs': 20}
+  blk.*.ffn_down.weight                      30  2.14e-06  2.96e-06  2.11e-01  0.979817  {'differs': 30}
+  blk.*.ffn_gate.weight                      30  1.44e-05  1.94e-05  2.02e-01  0.979830  {'differs': 30}
+  blk.*.ffn_norm.weight                      30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.ffn_up.weight                        30  1.35e-05  1.96e-05  1.97e-01  0.981343  {'differs': 30}
+  blk.*.inp_gate.weight                      30  6.60e-06  2.76e-05  2.32e-01  0.972754  {'differs': 30}
+  blk.*.laurel_l.weight                      30  1.42e-05  4.88e-05  2.49e-01  0.988420  {'differs': 30}
+  blk.*.laurel_post_norm.weight              30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.laurel_r.weight                      30  4.27e-06  4.30e-05  5.41e-02  0.999036  {'exact': 26, 'differs': 4}
+  blk.*.post_attention_norm.weight           30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.post_ffw_norm.weight                 30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.post_norm.weight                     30  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 30}
+  blk.*.proj.weight                          30  2.78e-05  4.48e-05  1.05e-01  0.994672  {'differs': 30}
+  output_norm.weight                          1  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 1}
+  per_layer_model_proj.weight                 1  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 1}
+  per_layer_proj_norm.weight                  1  0.00e+00  0.00e+00  0.00e+00  1.000000  {'exact': 1}
+  per_layer_token_embd.weight                 1  1.50e-04  1.50e-04  1.94e-01  0.980959  {'differs': 1}
+  token_embd.weight                           1  2.56e-06  2.56e-06  7.22e-02  0.997394  {'differs': 1}
+
+Layers:
+  layer    n     w_mse   max_mse   max_rel   min_cos
+      0   24  7.65e-06  4.88e-05  2.49e-01  0.987291
+      1   24  8.90e-06  2.46e-05  2.03e-01  0.985412
+      2   24  1.00e-05  3.84e-05  2.31e-01  0.986785
+      3   24  8.87e-06  2.52e-05  1.87e-01  0.987674
+      4   24  9.93e-06  3.77e-05  2.33e-01  0.983086
+      5   24  9.87e-06  2.22e-05  2.07e-01  0.986482
+      6   24  9.66e-06  3.18e-05  2.15e-01  0.984804
+      7   24  7.15e-06  3.03e-05  1.89e-01  0.987268
+      8   24  8.71e-06  3.53e-05  2.10e-01  0.986265
+      9   24  1.03e-05  3.47e-05  2.29e-01  0.985010
+     10   24  9.70e-06  4.06e-05  2.39e-01  0.983446
+     11   24  7.43e-06  3.26e-05  2.09e-01  0.985442
+     12   24  1.03e-05  3.64e-05  2.24e-01  0.985916
+     13   24  9.55e-06  3.54e-05  1.98e-01  0.985498
+     14   24  1.12e-05  4.48e-05  2.24e-01  0.986045
+     15   24  8.89e-06  2.43e-05  1.67e-01  0.987053
+     16   24  8.56e-06  1.66e-05  1.78e-01  0.986954
+     17   24  8.80e-06  2.82e-05  1.99e-01  0.983435
+     18   24  9.83e-06  3.31e-05  1.98e-01  0.980115
+     19   24  1.16e-05  2.81e-05  2.04e-01  0.983067
+     20   24  8.09e-06  2.36e-05  1.83e-01  0.985567
+     21   24  1.05e-05  2.37e-05  2.35e-01  0.984573
+     22   24  9.69e-06  2.42e-05  1.96e-01  0.984554
+     23   24  9.08e-06  2.62e-05  1.90e-01  0.981863
+     24   24  8.59e-06  4.30e-05  1.82e-01  0.984644
+     25   24  1.09e-05  2.69e-05  2.33e-01  0.982918
+     26   24  1.23e-05  2.56e-05  2.03e-01  0.981722
+     27   24  1.40e-05  2.69e-05  2.44e-01  0.979830
+     28   24  1.27e-05  2.76e-05  2.32e-01  0.972754
+     29   24  1.18e-05  3.75e-05  1.98e-01  0.980172
+
+Gate: MSE <= 0.001: PASS
+elapsed: 71.7s

@@ -101,3 +101,24 @@ KV section copied from the official gemma3n GGUF
 ```
 
 Quantize it, or load it directly with `llama-cli -m build.gguf -p "..."`.
+
+## Analyzing a GGUF against a reference
+
+`gguf_analyzer.py` diffs two GGUFs tensor by tensor without loading them into
+memory (mmap + a deterministic random sample of elements per tensor; for
+quantized tensors only the blocks holding sampled elements are dequantized).
+
+```bash
+python3 gguf_analyzer.py gemma-3n-E2B-v3nano-F16.gguf gemma-3n-E2B-it-f16.gguf \
+    --json-out reports/f16.json --txt-out reports/f16.txt --fail-mse 1e-3
+```
+
+It reports KV-metadata differences, inventory/shape/dtype mismatches and, per
+tensor, MSE, relative RMSE, cosine similarity, max |diff|, exact-match fraction
+and non-finite counts. Results are aggregated by layer-agnostic family
+(`blk.*.attn_q.weight`) and by layer. Each tensor also gets a provenance hint:
+`exact`, `ref-quant` (within the expected rounding/quantization noise of the two
+storage types) or `differs`. `--filter REGEX` limits the comparison and
+`--fail-mse` makes the script exit 1 when a tensor or the inventory fails.
+
+Reports against the ggml-org `gemma-3n-E2B-it` reference GGUFs are in `reports/`.
