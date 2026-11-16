@@ -13,6 +13,11 @@ Validated in practice: all 727 tensors land within 1e-3 MSE of the official
 model, and the result answers correctly ("…George Washington…", atomic symbol
 "H") both unquantized and after `Q4_K_S` quantization.
 
+**Prebuilt weights:** if you only want to run the model, the F16 and `Q4_K_S`
+GGUFs built with this script are hosted at
+[`daedalus2027/gemma3n-v3nano-gguf`](https://huggingface.co/daedalus2027/gemma3n-v3nano-gguf)
+on Hugging Face.
+
 ## Requirements
 
 - Python 3.9+
