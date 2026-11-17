@@ -44,6 +44,19 @@ pip install numpy gguf tflite
 `llama.cpp` is **not** required to build the GGUF. You only need it to run or
 quantize the result (`llama-quantize`, `llama-cli`).
 
+## Publishing to Hugging Face
+
+After building (or quantizing) the GGUFs, upload them to the public hub repo:
+
+```bash
+python3 upload_hf.py                 # upload F16, Q4_K_S, Q8_0 from ../work/bin
+python3 upload_hf.py --kind Q8_0   # upload just Q8_0
+python3 upload_hf.py --dry-run     # list what would be uploaded
+python3 upload_hf.py --upload /path/a.gguf:name_a.gguf /path/b.gguf:name_b.gguf
+```
+
+Repo defaults to `daedalus2027/gemma3n-v3nano-gguf`.
+
 ## Inputs
 
 | Input | Default | Purpose |
